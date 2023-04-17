@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   name = "impute";
-  compiler-nix-name = "ghc944"; # Version of GHC to use
+  compiler-nix-name = "ghc961"; # Version of GHC to use
 
   # crossPlatforms = p: pkgs.lib.optionals pkgs.stdenv.hostPlatform.isx86_64 ([
   #   p.mingwW64
