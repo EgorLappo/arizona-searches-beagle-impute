@@ -1,0 +1,32 @@
+-- Instructions on how to write this file are in the Cabal
+-- documentation, which can be found here:
+--   http://haskell.org/cabal/release/cabal-latest/doc/users-guide/
+
+name:           impute
+version:        0.1.0.0
+description:    Scripts for forensic data analysis
+author:         Egor Lappo
+maintainer:     elappo@stanford.edu
+copyright:      2023 Egor Lappo
+license:        BSD3
+build-type:     Simple
+
+executable impute
+  hs-source-dirs: src
+  main-is: impute.hs
+  default-extensions: 
+      OverloadedStrings
+      BangPatterns
+      NamedFieldPuns
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wno-unused-do-bind -Wno-unused-top-binds -threaded -rtsopts -with-rtsopts=-N -O2
+  build-depends: 
+      base >= 4.2 && < 5
+    , containers
+    , optparse-applicative
+    , parallel-io
+    , random
+    , split
+    , text
+    , turtle
+  default-language: Haskell2010
+  
